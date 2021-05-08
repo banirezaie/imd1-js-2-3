@@ -13,8 +13,8 @@ function square(x) {
 function isRightTriangle(a, b, c) {
   return square(a) + square(b) === square(c)
 }
-// console.log("before")
+console.log("before")
 
 isRightTriangle(3, 4, 5)
 
-// console.log("done!!!")
+console.log("done!!!")

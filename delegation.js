@@ -1,9 +1,9 @@
-// const lis = document.querySelectorAll("li")
-// for (let li of lis) {
-//   li.addEventListener("click", function () {
-//     li.remove()
-//   })
-// }
+const lis = document.querySelectorAll("li")
+for (let li of lis) {
+  li.addEventListener("click", function () {
+    li.remove()
+  })
+}
 // be careful that it doesn't work properly, so what we do is:
 
 const tweetsContainer = document.querySelector("#tweets")
@@ -27,7 +27,8 @@ const addTweet = (username, tweet) => {
   tweetsContainer.append(newTweet)
 }
 
-// tweetsContainer.addEventListener("click", function (e) {
-//   console.log("click on UL")
-//   e.target.nodeName === "LI" && e.target.remove()
-// })
+tweetsContainer.addEventListener("click", function (e) {
+  console.log("click on UL")
+  console.dir(e.target)
+  e.target.nodeName === "LI" && e.target.remove()
+})
