@@ -1,4 +1,5 @@
 const btn = document.querySelector("#v2")
+console.dir(btn)
 // in browser you can see what you have with console.dir(btn) and you can see all event start with "on" like
 //onclick , onmouseenter ,
 
@@ -7,7 +8,7 @@ btn.onclick = function () {
 }
 
 function scream() {
-  console.log("AAAAAAAAAAHHHHHHH")
+  console.log(`AAAAAAAAAAHHHHHHH`)
 }
 
 btn.onmouseenter = scream
