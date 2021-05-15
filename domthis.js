@@ -1,22 +1,9 @@
-const makeRandColor = () => {
-  const r = Math.floor(Math.random() * 255)
-  const g = Math.floor(Math.random() * 255)
-  const b = Math.floor(Math.random() * 255)
-  return `rgb(${r}, ${g}, ${b})`
-}
-
-const buttons = document.querySelectorAll("button")
-
-for (let button of buttons) {
-  button.addEventListener("click", colorize)
-}
-
-const h1s = document.querySelectorAll("h1")
-for (let h1 of h1s) {
-  h1.addEventListener("click", colorize)
-}
-
+const randNum = () => Math.floor(Math.random() * 256);
+const randColor = () => `rgb(${randNum()}, ${randNum()}, ${randNum()})`;
 function colorize() {
-  this.style.backgroundColor = makeRandColor()
-  this.style.color = makeRandColor()
+	this.style.backgroundColor = randColor();
+	this.style.color = randColor();
 }
+
+document.querySelectorAll("button").forEach((button) => button.addEventListener("click", colorize));
+document.querySelectorAll("h1").forEach((h1) => h1.addEventListener("click", colorize));
