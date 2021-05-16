@@ -1,5 +1,5 @@
 /*
-make a shopping list with their quantity:
+Make a shopping list with their quantity:
 
 you should follow the below steps:
 
@@ -12,3 +12,22 @@ you should follow the below steps:
  - Reset inputs
 
 */
+
+document.querySelector("form").addEventListener("submit", (event) => {
+	event.preventDefault();
+	const form = document.querySelector("form");
+	const list = document.querySelector("#list");
+	const product = form.elements.product.value;
+	const qty = form.elements.qty.value;
+
+	const li = document.createElement("li");
+	const b = document.createElement("b");
+
+	b.append(product);
+	li.append(b);
+	li.append(` - #${qty}`);
+	list.appendChild(li);
+
+	form.elements.product.value = "";
+	form.elements.qty.value = "";
+});

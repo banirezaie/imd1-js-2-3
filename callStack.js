@@ -1,20 +1,23 @@
-// copy this code in:
+// Copy this code in:
 // http://latentflip.com/loupe
 // and chrome debugger!!!
 
 function multiply(x, y) {
-  return x * y
+	return x * y;
 }
 
 function square(x) {
-  return multiply(x, x)
+	return multiply(x, x);
 }
 
 function isRightTriangle(a, b, c) {
-  return square(a) + square(b) === square(c)
+	return square(a) + square(b) === square(c);
 }
-// console.log("before")
 
-isRightTriangle(3, 4, 5)
+console.log(square(2));
+console.log("before");
 
-// console.log("done!!!")
+debugger;
+
+console.log(isRightTriangle(3, 4, 5));
+console.log("done!!!");
