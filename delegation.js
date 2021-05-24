@@ -7,7 +7,7 @@
 // be careful that it doesn't work properly, so what we do is:
 
 const tweetsContainer = document.querySelector("#tweets")
-
+// console.log(tweetsContainer)
 const tweetForm = document.querySelector("#tweetForm")
 tweetForm.addEventListener("submit", function (e) {
   e.preventDefault()
@@ -27,7 +27,10 @@ const addTweet = (username, tweet) => {
   tweetsContainer.append(newTweet)
 }
 
-// tweetsContainer.addEventListener("click", function (e) {
-//   console.log("click on UL")
-//   e.target.nodeName === "LI" && e.target.remove()
-// })
+// select parent
+tweetsContainer.addEventListener("click", function (e) {
+  console.log("click on UL")
+  // console.log(e.target)
+  console.dir(e.target)
+  e.target.nodeName === "LI" && e.target.remove()
+})

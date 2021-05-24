@@ -1,6 +1,12 @@
 // copy this code in:
 // http://latentflip.com/loupe
 // and chrome debugger!!!
+/* 1.the mechanism the js interperter users to keep track of its place in a script
+that calls multiple functions
+
+2. how js knows what function is currently being run and what functions are 
+called from whith in that function, ect.*/
+
 
 function multiply(x, y) {
   return x * y

@@ -12,6 +12,15 @@ function scream() {
 
 btn.onmouseenter = scream
 
+// ***************************************************
+
+// function scream(name) {
+//   console.log(`AAAAAAAAAAHHHHHHH ${name} attacked me`)
+// }
+
+// btn.onmouseenter = () => scream("zahra")
+
+
 //it doesn't work:
 //this code just execute right away,
 // document.querySelector("h1").onclick = alert("you clicked the h1")

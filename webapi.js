@@ -1,3 +1,5 @@
+// http://latentflip.com/loupe
+
 console.log("sending request to server!")
 
 setTimeout(function () {
