@@ -8,6 +8,9 @@
 //   document.body.style.backgroundColor = "yellow"
 // }, 3000)
 
+
+/*                  CALL BACK HELL              */
+
 // setTimeout(() => {
 //   document.body.style.backgroundColor = "red"
 //   setTimeout(() => {
@@ -24,6 +27,11 @@
 //   }, 1000)
 // }, 1000)
 
+
+
+
+
+
 // const delayedColourChange = (newColor, delay) => {
 //   setTimeout(() => {
 //     document.body.style.backgroundColor = newColor
@@ -34,15 +42,23 @@
 // delayedColourChange("teal", 2000)
 // delayedColourChange("khaki", 4000)
 
-// const delayedColourChange = (newColor, delay, doNext) => {
-//   setTimeout(() => {
-//     document.body.style.backgroundColor = newColor
-//     doNext && doNext()
-//   }, delay)
-// }
 
-// delayedColourChange("red", 1000, () => {
-//   delayedColourChange("orange", 1000, () => {
-//     delayedColourChange("yellow", 1000)
-//   })
-// })
+
+
+
+
+const delayedColourChange = (newColor, delay, doNext) => {
+  setTimeout(() => {
+    document.body.style.backgroundColor = newColor
+    doNext && doNext()
+  }, delay)
+}
+
+
+delayedColourChange("red", 1000, () => { //callback
+  delayedColourChange("orange", 1000, () => { //callback
+    delayedColourChange("yellow", 1000, ()=>{})
+  })
+})
+
+

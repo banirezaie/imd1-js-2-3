@@ -3,11 +3,22 @@ const container = document.querySelector("#container")
 
 button.addEventListener("click", function (e) {
   container.style.backgroundColor = makeRandColor()
-  e.stopPropagation()
+
+  /*stopPropagation() The stopPropagation() method of the Event 
+  interface prevents further propagation of the current event in the 
+  capturing and bubbling phases. It does not, however, prevent 
+  any default behaviors from occurring; for instance, 
+  clicks on links are still processed*/
+  
+  e.stopPropagation() 
 })
+
+
 container.addEventListener("click", function () {
   container.classList.toggle("hide")
 })
+
+
 
 const makeRandColor = () => {
   const r = Math.floor(Math.random() * 255)
